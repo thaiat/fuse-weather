@@ -1,0 +1,3 @@
+<Panel ng:Selector="cloud">
+    <Image File="../../../../resources/cloud4.png">
+</Panel>

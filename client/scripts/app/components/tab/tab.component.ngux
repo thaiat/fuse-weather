@@ -1,0 +1,41 @@
+<Panel ng:Selector="tab">
+    <Page ClipToBounds="true" Background="{{content.bgcolor}}">
+        <Translation Y="{{content.ypos}}" RelativeTo="Size" />
+        <Panel Margin="50,50,0,0">
+            <Panel Alignment="TopLeft" Width="30%">
+                <Panel>
+                    <ng:cloud *ngIf="content.Summary !== 'Sunny'" />
+                    <ng:rain *ngIf="content.Summary === 'Rainy'" />
+                    <ng:snow *ngIf="content.Summary === 'Snowy'" />
+                </Panel>
+            </Panel>
+            <Panel>
+                <ng:tod [ng:name]="content.TOD" Width="25%" Alignment="TopLeft" Offset="-25,-30" />
+            </Panel>
+            <EnteringAnimation>
+                <Move Y="-0.5" RelativeTo="ParentSize" />
+            </EnteringAnimation>
+            <ExitingAnimation>
+                <Move Y="0.1667" RelativeTo="ParentSize" />
+            </ExitingAnimation>
+        </Panel>
+        <StackPanel Width="43%" Alignment="TopRight" Height="100%">
+            <Text Value="{{content.TOD}}" Font="NunitoBold" FontSize="19" TextColor="#ffffff80" Margin="0,14,0,0" />
+            <Text Value="{{content.Temp}}" Font="NunitoBold" FontSize="32" TextColor="#fff" Margin="0,0,0,14" Alignment="CenterLeft" />
+            <StackPanel Alignment="TopLeft">
+                <Body Value="{{content.Summary}}" FontSize="26" />
+                <Body Value="{{content.Wind}}" />
+                <Body Value="{{content.Humidity}}" />
+                <ExitingAnimation>
+                    <Move Y="0.5" RelativeTo="ParentSize" Easing="Linear" />
+                </ExitingAnimation>
+                <EnteringAnimation>
+                    <Move Y="0.5" RelativeTo="ParentSize" Easing="Linear" />
+                </EnteringAnimation>
+            </StackPanel>
+        </StackPanel>
+        <EnteringAnimation>
+            <Move Y="0.3334" RelativeTo="Size" />
+        </EnteringAnimation>
+    </Page>
+</Panel>
