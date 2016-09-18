@@ -9,8 +9,8 @@
                     <ng:snow *ngIf="content.Summary === 'Snowy'" />
                 </Panel>
             </Panel>
-            <Panel>
-                <ng:tod [ng:name]="content.TOD" Width="25%" Alignment="TopLeft" Offset="-25,-30" />
+            <Panel Width="25%" Alignment="TopLeft" Offset="-25,-30">
+                <ng:tod [ng:name]="content.TOD"  />
             </Panel>
             <EnteringAnimation>
                 <Move Y="-0.5" RelativeTo="ParentSize" />
