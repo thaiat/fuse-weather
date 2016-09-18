@@ -15,7 +15,10 @@
                 <NavigationMotion Overflow="Clamp" GotoDuration="0.3" GotoEasing="QuadraticOut" />
             </LinearNavigation>
             <SwipeNavigate SwipeDirection="Down" />
-
+            <StackPanel>
+                <ng:tod [ng:name]="'Night'" />
+                <ng:tod [ng:name]="'SomethingElse'" />
+            </StackPanel>
         </Panel>
     </DockPanel>
 </Panel>

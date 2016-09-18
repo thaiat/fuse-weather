@@ -6,7 +6,6 @@ var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var HtmlwebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
-var ChangeModePlugin = require('./plugins/ChangeModePlugin');
 var autoprefixer = require('autoprefixer');
 var DEFAULT_TARGET = 'app';
 var target = process.env.TARGET || DEFAULT_TARGET;
@@ -350,10 +349,6 @@ module.exports = {
                 to: '../hooks' // we need to go up one folder in the case of ionic2
             }] : [])
 
-        ),
-        new ChangeModePlugin(isTargetIonic2(target) ? {
-            folder: '../hooks',
-            mode: 33261
-        } : {})
+        )
     ].concat(pluginsProd)
 };

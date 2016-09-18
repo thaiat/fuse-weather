@@ -1,0 +1,6 @@
+<Panel ng:Selector="tod">
+
+    <Image *ngIf="name==='Night'" File="../../../../resources/moon.png" />
+    <Image *ngIf="name!=='Night'" File="../../../../resources/sun.png" />
+
+</Panel>
