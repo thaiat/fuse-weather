@@ -10,7 +10,7 @@
                 </Panel>
             </Panel>
             <Panel>
-                <ng:tod [ng:name]="content.TOD" Width="25%" Alignment="TopLeft" Offset="-25,-30" />
+
             </Panel>
             <EnteringAnimation>
                 <Move Y="-0.5" RelativeTo="ParentSize" />

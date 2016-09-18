@@ -8,18 +8,13 @@
         <StackPanel Dock="Top" Background="#8ba892" (Clicked)="reload()">
             <StatusBarBackground/>
             <Text Margin="5,5,0,5" Alignment="Left" FontSize="18" Font="NunitoBold" TextColor="#ffffff80"> Atlanta, Georgia </Text>
-         </StackPanel>
+        </StackPanel>
         <BottomBarBackground Dock="Bottom" />
         <Panel Dock="Fill" Background="#8ba892">
             <LinearNavigation ux:Name="lnav">
                 <NavigationMotion Overflow="Clamp" GotoDuration="0.3" GotoEasing="QuadraticOut" />
             </LinearNavigation>
             <SwipeNavigate SwipeDirection="Down" />
-
-            <Panel *ngFor="let time of times">
-                <ng:tab [ng:content]="time" />
-
-            </Panel>
 
         </Panel>
     </DockPanel>

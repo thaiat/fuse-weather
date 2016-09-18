@@ -8,16 +8,15 @@ import { RainComponent } from './components/rain/rain.component';
 import { SnowComponent } from './components/snow/snow.component';
 import { CloudComponent } from './components/cloud/cloud.component';
 import { TabComponent } from './components/tab/tab.component';
-import { TodComponent } from './components/tod/tod.component';
-import { Weather } from './services/weather/weather.service.ts';
 
 @NgModule({
     imports: [
         FuseModule, CommonModule, FormsModule, ReactiveFormsModule, HttpModule
     ],
-    declarations: [MainComponent, TodComponent, TabComponent, RainComponent, SnowComponent, CloudComponent],
-    bootstrap: [MainComponent],
-    providers: [Weather]
+    declarations: [MainComponent, TabComponent, RainComponent, SnowComponent, CloudComponent],
+    providers: [],
+    bootstrap: [MainComponent]
+
 })
 class MainModule { }
 
