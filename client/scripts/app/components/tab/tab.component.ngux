@@ -9,7 +9,7 @@
                     <ng:snow *ngIf="content.Summary === 'Snowy'" />
                 </Panel>
             </Panel>
-            <Panel>
+            <Panel Width="25%" Alignment="TopLeft" Offset="-25,-30">
 
             </Panel>
             <EnteringAnimation>
